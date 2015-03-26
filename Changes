@@ -1,4 +1,4 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - initial version
+  - App::which was spun off from File-Which
