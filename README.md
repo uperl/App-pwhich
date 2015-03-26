@@ -35,7 +35,7 @@ purely in Perl (uses the module `File::Which`), so is portable.
 # SUPPORT
 
 Bugs should be reported via the GitHub issue tracker
-[https://github.com/plicease/File-Which/issues](https://github.com/plicease/File-Which/issues)
+[https://github.com/plicease/App-pwhich/issues](https://github.com/plicease/App-pwhich/issues)
 For other issues, contact the maintainer.
 
 # SEE ALSO
