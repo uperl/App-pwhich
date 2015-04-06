@@ -6,7 +6,7 @@ use warnings;
 use App::pwhich;
 
 # PODNAME: pwhich
-# ABSTRACT: Perl-only `which'
+# ABSTRACT: Pure Perl implementation of which
 # VERSION
 
 exit App::pwhich::main(@ARGV);
@@ -20,7 +20,7 @@ exit App::pwhich::main(@ARGV);
 
 =head1 DESCRIPTION
 
-`pwhich' is a command-line utility program for finding paths to other
+C<pwhich> is a command-line utility program for finding paths to other
 programs based on the user's C<PATH>. It is similar to the usually Unix
 tool `which', and tries to emulate its functionality, but is written
 purely in Perl (uses the module C<File::Which>), so is portable.

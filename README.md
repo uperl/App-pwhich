@@ -1,6 +1,6 @@
 # pwhich
 
-Perl-only \`which'
+Pure Perl implementation of which
 
 # SYNOPSIS
 
@@ -11,7 +11,7 @@ Perl-only \`which'
 
 # DESCRIPTION
 
-\`pwhich' is a command-line utility program for finding paths to other
+`pwhich` is a command-line utility program for finding paths to other
 programs based on the user's `PATH`. It is similar to the usually Unix
 tool \`which', and tries to emulate its functionality, but is written
 purely in Perl (uses the module `File::Which`), so is portable.
