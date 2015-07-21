@@ -2,7 +2,6 @@ package App::pwhich;
 
 use strict;
 use warnings;
-use 5.008001;
 use File::Which qw( which );
 use Getopt::Std qw( getopts );
 
@@ -89,6 +88,13 @@ Bugs should be reported via the GitHub issue tracker
 L<https://github.com/plicease/App-pwhich/issues>
 
 For other issues, contact the maintainer.
+
+=head1 CAVEATS
+
+This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
+It should work on Perl 5.6.x and I may even test on 5.6.2.  I will accept
+patches to maintain compatibility for such older Perls, but you may
+need to fix it on 5.6.x / 5.8.0 and send me a patch.
 
 =head1 SEE ALSO
 
