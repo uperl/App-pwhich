@@ -9,7 +9,7 @@ use App::pwhich;
 # ABSTRACT: Pure Perl implementation of which
 # VERSION
 
-exit App::pwhich::main(@ARGV);
+exit App::pwhich::main('which', @ARGV);
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,7 @@ provide any documentation on how you might use it.
 =head1 CAVEATS
 
 This module does not know about built-in shell commands, as the built-in
-command C<which> and C<where> ususally do.
+command C<which> and C<where> usually do.
 
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 

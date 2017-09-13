@@ -11,7 +11,9 @@ use Getopt::Std qw( getopts );
 
 sub main
 {
-  local @ARGV = @_;
+  local @ARGV;
+  my $prog;
+  ($prog, @ARGV) = @_;
   
   my %opts;
   getopts('avs', \%opts) || return _usage();
@@ -102,7 +104,7 @@ For other issues, contact the maintainer.
 =head1 CAVEATS
 
 This module does not know about built-in shell commands, as the built-in
-command C<which> and C<where> ususally do.
+command C<which> and C<where> usually do.
 
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 

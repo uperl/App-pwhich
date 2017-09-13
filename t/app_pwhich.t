@@ -111,7 +111,7 @@ subtest 'the -a option' => sub {
   subtest 'loud' => sub {
     undef $arg;
     is(
-      [capture { (App::pwhich::main('-a','foo'),$arg) }],
+      [capture { (App::pwhich::main('which', '-a','foo'),$arg) }],
       array {
         # stdout
         item "/usr/bin/foo\n/bin/foo\n/usr/locla/bin\n";
@@ -130,7 +130,7 @@ subtest 'the -a option' => sub {
   subtest 'loud' => sub {
     undef $arg;
     is(
-      [capture { (App::pwhich::main('-a','-s','foo'),$arg) }],
+      [capture { (App::pwhich::main('which', '-a','-s','foo'),$arg) }],
       array {
         # stdout
         item '';

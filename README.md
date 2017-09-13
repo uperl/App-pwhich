@@ -63,7 +63,7 @@ For other issues, contact the maintainer.
 # CAVEATS
 
 This module does not know about built-in shell commands, as the built-in
-command `which` and `where` ususally do.
+command `which` and `where` usually do.
 
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 
