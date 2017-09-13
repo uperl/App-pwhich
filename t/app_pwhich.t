@@ -24,12 +24,21 @@ subtest 'script can find perl' => sub {
 
   note "which perl = $which_perl";
 
-  script_runs(
-    [ 'bin/pwhich', $perl ],
-    'script did not fail',
-  );
-  
-  script_stdout_is "$which_perl\n";
+  subtest 'loud' => sub {
+    script_runs(
+      [ 'bin/pwhich', $perl ],
+      'script did not fail',
+    );
+    script_stdout_is "$which_perl\n";
+  };
+
+  subtest 'silent' => sub {
+    script_runs(
+      [ 'bin/pwhich', -s => $perl ],
+      'script did not fail',
+    );
+    script_stdout_is '';
+  };
 
 };
 
@@ -45,14 +54,25 @@ subtest 'script can fail to find an executable' => sub {
 
   note "bogus = $bogus";
 
-  script_runs(
-    [ 'bin/pwhich', $bogus ],
-    { exit => 1 },
-    'script did not find bogus command',
-  );
-  
-  script_stdout_is '';
-  script_stderr_like qr{no $bogus in PATH};
+  subtest 'loud' => sub {
+    script_runs(
+      [ 'bin/pwhich', $bogus ],
+      { exit => 1 },
+      'script did not find bogus command',
+    );
+    script_stdout_is '';
+    script_stderr_like qr{no $bogus in PATH};
+  };
+
+  subtest 'silent' => sub {
+    script_runs(
+      [ 'bin/pwhich', -s => $bogus ],
+      { exit => 1 },
+      'script did not find bogus command',
+    );
+    script_stdout_is '';
+    script_stderr_is '';
+  };
 
 };
 
@@ -87,22 +107,44 @@ subtest 'the -a option' => sub {
       },
     ],
   );
-  
-  is(
-    [capture { (App::pwhich::main('-a','foo'),$arg) }],
-    array {
-      # stdout
-      item "/usr/bin/foo\n/bin/foo\n/usr/locla/bin\n";
-      # stderr
-      item '';
-      # exit
-      item 0;
-      # argument
-      item 'foo';
-      end;
-    },
-    'i/o',
-  );
+
+  subtest 'loud' => sub {
+    undef $arg;
+    is(
+      [capture { (App::pwhich::main('-a','foo'),$arg) }],
+      array {
+        # stdout
+        item "/usr/bin/foo\n/bin/foo\n/usr/locla/bin\n";
+        # stderr
+        item '';
+        # exit
+        item 0;
+        # argument
+        item 'foo';
+        end;
+      },
+      'i/o',
+    );
+  };
+
+  subtest 'loud' => sub {
+    undef $arg;
+    is(
+      [capture { (App::pwhich::main('-a','-s','foo'),$arg) }],
+      array {
+        # stdout
+        item '';
+        # stderr
+        item '';
+        # exit
+        item 0;
+        # argument
+        item 'foo';
+        end;
+      },
+      'i/o',
+    );
+  };
 
 };
 

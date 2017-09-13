@@ -17,6 +17,7 @@ exit App::pwhich::main(@ARGV);
  $ pwhich -a perl          # print all matches
  $ pwhich perl perldoc ... # look for multiple programs
  $ pwhich -a perl perldoc ...
+ $ pwhich -s perl          # silent mode
 
 =head1 DESCRIPTION
 
@@ -27,7 +28,7 @@ purely in Perl (uses the module C<File::Which>), so is portable.
 
 =head2 Calling syntax
 
- $ pwhich [-a] [-v] programname [programname ...]
+ $ pwhich [-a] [-s] [-v] programname [programname ...]
 
 =head2 Options
 
@@ -38,6 +39,11 @@ purely in Perl (uses the module C<File::Which>), so is portable.
 The option I<-a> will make C<pwhich> print all matches found in the
 C<PATH> variable instead of just the first one. Each match is printed
 on a separate line.
+
+=item -s
+
+No output, just return 0 if any of the executables are found, or 1
+if none are found.
 
 =item -v
 

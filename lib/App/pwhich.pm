@@ -14,7 +14,7 @@ sub main
   local @ARGV = @_;
   
   my %opts;
-  getopts('av', \%opts) || return _usage();
+  getopts('avs', \%opts) || return _usage();
   
   return _version() if $opts{v};
   
@@ -28,11 +28,14 @@ sub main
     
     # We might end up with @result = (undef) -> 1 elem
     @result = () unless defined $result[0];
-    print "$_\n" for grep { defined } @result;
+    unless($opts{s})
+    {
+      print "$_\n" for grep { defined } @result;
+    }
     
     unless (@result)
     {
-      print STDERR "$0: no $file in PATH\n";
+      print STDERR "$0: no $file in PATH\n" unless $opts{s};
       return 1;
     }
   }
@@ -62,9 +65,10 @@ END_TEXT
 sub _usage
 {
   print <<"END_TEXT";
-Usage: $0 [-a] [-v] programname [programname ...]
+Usage: $0 [-a] [-s] [-v] programname [programname ...]
       -a        Print all matches in PATH, not just the first.
       -v        Prints version and exits
+      -s        Silent mode
 
 END_TEXT
   1;

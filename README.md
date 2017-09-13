@@ -8,6 +8,7 @@ Pure Perl implementation of which
     $ pwhich -a perl          # print all matches
     $ pwhich perl perldoc ... # look for multiple programs
     $ pwhich -a perl perldoc ...
+    $ pwhich -s perl          # silent mode
 
 # DESCRIPTION
 
@@ -18,7 +19,7 @@ purely in Perl (uses the module `File::Which`), so is portable.
 
 ## Calling syntax
 
-    $ pwhich [-a] [-v] programname [programname ...]
+    $ pwhich [-a] [-s] [-v] programname [programname ...]
 
 ## Options
 
@@ -27,6 +28,11 @@ purely in Perl (uses the module `File::Which`), so is portable.
     The option _-a_ will make `pwhich` print all matches found in the
     `PATH` variable instead of just the first one. Each match is printed
     on a separate line.
+
+- -s
+
+    No output, just return 0 if any of the executables are found, or 1
+    if none are found.
 
 - -v
 
