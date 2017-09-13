@@ -73,6 +73,10 @@ END_TEXT
 
 __END__
 
+=head1 SYNOPSIS
+
+ perldoc pwhich
+
 =head1 DESCRIPTION
 
 This module contains the guts of the L<pwhich> script that is
