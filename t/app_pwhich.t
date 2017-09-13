@@ -54,4 +54,24 @@ subtest 'script can fail to find an executable' => sub {
 
 };
 
+subtest 'script can print version number' => sub {
+
+  script_runs(
+    [ 'bin/pwhich', '-v' ],
+    { exit => 2 },
+    'script runs',
+  );
+
+  my $my_version = $App::pwhich::VERSION || 'dev';
+  
+  script_stdout_like qr{This is pwhich running File::Which version $File::Which::VERSION\n[ ]+App::pwhich version $my_version}, 'versions are printed';
+  script_stdout_like qr{Copyright 2002 Per Einar Ellefsen}, 'original author copyright';
+  script_stdout_like qr{Some parts Copyright 2009 Adam Kennedy}, 'second maintainer copyright';
+  script_stdout_like qr{Other parts Copyright 20[0-9]{2} Graham Ollis}, 'third maintainer copyright';
+  script_stdout_like qr{This program is free software; you can redistribute it and/or modify\nit under the same terms as Perl itself\.}, 'license info';
+
+
+};
+
 done_testing;
+

@@ -42,9 +42,10 @@ sub main
 
 sub _version
 {
+  my $my_version = $app::pwhich::VERSION || 'dev';
   print <<"END_TEXT";
 This is pwhich running File::Which version $File::Which::VERSION
-                       App::pwhich version $App::pwhich::VERSION
+                       App::pwhich version $my_version
 
 Copyright 2002 Per Einar Ellefsen
 
