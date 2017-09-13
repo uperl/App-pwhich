@@ -1,7 +1,8 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
+use lib::findbin '../lib'; # dev-only
 use App::pwhich;
 
 # PODNAME: pwhich
