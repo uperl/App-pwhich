@@ -46,6 +46,7 @@ For other issues, contact the maintainer.
 
 # SEE ALSO
 
+- [pwhere](https://metacpan.org/pod/pwhere)
 - [File::Which](https://metacpan.org/pod/File::Which)
 
     Perl API for [pwhich](https://metacpan.org/pod/pwhich)
@@ -53,12 +54,6 @@ For other issues, contact the maintainer.
 - [App::pwhich](https://metacpan.org/pod/App::pwhich)
 
     Guts of this script.
-
-- [Devel::CheckBin](https://metacpan.org/pod/Devel::CheckBin)
-
-    This module purports to "check that a command is available", but does not
-
-    provide any documentation on how you might use it.
 
 # CAVEATS
 

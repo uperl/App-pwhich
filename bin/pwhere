@@ -9,47 +9,18 @@ use App::pwhich;
 # ABSTRACT: Pure Perl implementation of which
 # VERSION
 
-exit App::pwhich::main('which', @ARGV);
+exit App::pwhich::main('where', @ARGV);
 
 =head1 SYNOPSIS
 
- $ pwhich perl
- $ pwhich -a perl          # print all matches
- $ pwhich perl perldoc ... # look for multiple programs
- $ pwhich -a perl perldoc ...
- $ pwhich -s perl          # silent mode
+ $ pwhere perl
 
 =head1 DESCRIPTION
 
-C<pwhich> is a command-line utility program for finding paths to other
+C<pwhere> is a command-line utility program for finding paths to other
 programs based on the user's C<PATH>. It is similar to the usually Unix
-tool `which', and tries to emulate its functionality, but is written
+tool `where', and tries to emulate its functionality, but is written
 purely in Perl (uses the module C<File::Which>), so is portable.
-
-=head2 Calling syntax
-
- $ pwhich [-a] [-s] [-v] programname [programname ...]
-
-=head2 Options
-
-=over
-
-=item -a
-
-The option I<-a> will make C<pwhich> print all matches found in the
-C<PATH> variable instead of just the first one. Each match is printed
-on a separate line.
-
-=item -s
-
-No output, just return 0 if any of the executables are found, or 1
-if none are found.
-
-=item -v
-
-Prints version (of C<File::Which>) and copyright notice and exits.
-
-=back
 
 =head1 SUPPORT
 
@@ -61,7 +32,7 @@ For other issues, contact the maintainer.
 
 =over 4
 
-=item L<pwhere>
+=item L<pwhich>
 
 =item L<File::Which>
 

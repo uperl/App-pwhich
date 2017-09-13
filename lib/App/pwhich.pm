@@ -16,11 +16,17 @@ sub main
   ($prog, @ARGV) = @_;
   
   my %opts;
-  getopts('avs', \%opts) || return _usage();
   
-  return _version() if $opts{v};
-  
-  return _usage() unless @ARGV;
+  if($prog eq 'which')
+  {
+    getopts('avs', \%opts) || return _usage();
+    return _version() if $opts{v};
+    return _usage() unless @ARGV;
+  }
+  else
+  {
+    $opts{a} = 1;
+  }
   
   foreach my $file (@ARGV)
   {
@@ -114,16 +120,15 @@ This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 
 =item L<pwhich>
 
-Published interface (script) for this module.
+Public interface (script) for this module.
+
+=item L<pwhere>
+
+Another public interface for this module.
 
 =item L<File::Which>
 
 Implementation used by this module.
-
-=item L<Devel::CheckBin>
-
-This module purports to "check that a command is available", but does not
-provide any documentation on how you might use it.
 
 =back
 
