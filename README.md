@@ -1,4 +1,4 @@
-# pwhich
+# pwhich [![Build Status](https://secure.travis-ci.org/plicease/App-pwhich.png)](http://travis-ci.org/plicease/App-pwhich)
 
 Pure Perl implementation of which
 
