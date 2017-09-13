@@ -13,7 +13,6 @@ $modules{$_} = $_ for qw(
   ExtUtils::MakeMaker
   File::Which
   Test2::V0
-  Test::More
   Test::Script
 );
 

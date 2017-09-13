@@ -2,6 +2,7 @@ package App::pwhich;
 
 use strict;
 use warnings;
+use 5.008001;
 use File::Which qw( which );
 use Getopt::Std qw( getopts );
 
