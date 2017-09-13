@@ -56,10 +56,10 @@ For other issues, contact the maintainer.
 
 # CAVEATS
 
+This module does not know about built-in shell commands, as the built-in
+command `which` and `where` ususally do.
+
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
-It should work on Perl 5.6.x and I may even test on 5.6.2.  I will accept
-patches to maintain compatibility for such older Perls, but you may
-need to fix it on 5.6.x / 5.8.0 and send me a patch.
 
 # AUTHOR
 
