@@ -64,7 +64,7 @@ subtest 'script can print version number' => sub {
     'script runs',
   );
 
-  my $my_version = $App::pwhich::VERSION || 'dev';
+  my $my_version = App::pwhich->VERSION || 'dev';
   
   script_stdout_like qr{This is pwhich running File::Which version $File::Which::VERSION\n[ ]+App::pwhich version $my_version}, 'versions are printed';
   script_stdout_like qr{Copyright 2002 Per Einar Ellefsen}, 'original author copyright';
@@ -89,11 +89,16 @@ subtest 'the -a option' => sub {
   );
   
   is(
-    [capture { App::pwhich::main('-a','foo') }],
+    [capture { (App::pwhich::main('-a','foo'),$arg) }],
     array {
+      # stdout
       item "/usr/bin/foo\n/bin/foo\n/usr/locla/bin\n";
+      # stderr
       item '';
+      # exit
       item 0;
+      # argument
+      item 'foo';
       end;
     },
     'i/o',

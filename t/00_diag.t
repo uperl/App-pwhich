@@ -10,8 +10,10 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  Capture::Tiny
   ExtUtils::MakeMaker
   File::Which
+  Test2::Mock
   Test2::V0
   Test::Script
 );
