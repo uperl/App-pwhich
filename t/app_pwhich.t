@@ -1,9 +1,11 @@
 use Test2::V0 -no_srand => 1;
+use Test2::Mock;
 use App::pwhich;
 use Test::Script;
 use File::Which qw( which );
 use File::Basename qw( basename );
 use File::Temp ();
+use Capture::Tiny qw( capture );
 
 subtest 'script can find perl' => sub {
 
@@ -70,6 +72,32 @@ subtest 'script can print version number' => sub {
   script_stdout_like qr{Other parts Copyright 20[0-9]{2} Graham Ollis}, 'third maintainer copyright';
   script_stdout_like qr{This program is free software; you can redistribute it and/or modify\nit under the same terms as Perl itself\.}, 'license info';
 
+};
+
+subtest 'the -a option' => sub {
+
+  my $arg;
+  
+  my $mock = Test2::Mock->new(
+    class => 'App::pwhich',
+    override => [
+      which => sub {
+        ($arg) = @_;
+        qw( /usr/bin/foo /bin/foo /usr/locla/bin ),
+      },
+    ],
+  );
+  
+  is(
+    [capture { App::pwhich::main('-a','foo') }],
+    array {
+      item "/usr/bin/foo\n/bin/foo\n/usr/locla/bin\n";
+      item '';
+      item 0;
+      end;
+    },
+    'i/o',
+  );
 
 };
 
