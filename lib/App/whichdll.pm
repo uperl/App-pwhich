@@ -10,6 +10,29 @@ use Path::Tiny qw( path );
 # ABSTRACT: Find dynamic libraries
 # VERSION
 
+=head1 SYNOPSIS
+
+ perldoc whichdll
+
+=head1 DESCRIPTION
+
+This modules contains the guts of the whichdll script, which provides a command line interface
+for finding the dynamic libraries on your system in a portable way.
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<whichdll>
+
+=item L<pwhich>
+
+=item L<App::whichpm>
+
+=back
+
+=cut
+
 sub main
 {
   local @ARGV;
@@ -26,7 +49,7 @@ sub main
   foreach my $name (@ARGV)
   {
     my @result;
-    if($opts{a})
+    if($opts{a} || $name eq '*')
     {
       @result = find_lib( lib => '*', verify => sub { ($name eq '*') || ($_[0] eq $name) });
     }

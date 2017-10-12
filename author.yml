@@ -7,6 +7,8 @@ pod_spelling_system:
     - pwhich
     - Einar
     - Ellefsen
+    - whichdll
+    - DLLs
 
 pod_coverage:
   skip: 0
@@ -14,4 +16,5 @@ pod_coverage:
   # for either Class or method.
   private:
     - App::pwhich#main
+    - App::whichdll#main
 

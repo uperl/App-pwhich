@@ -12,7 +12,9 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Capture::Tiny
   ExtUtils::MakeMaker
+  FFI::CheckLib
   File::Which
+  Path::Tiny
   Test2::Mock
   Test2::V0
   Test::Script
