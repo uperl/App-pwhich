@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Add whichdll, App::whichdll
 
 1.15      2017-09-12 22:20:43 -0400
   - Add -s option
