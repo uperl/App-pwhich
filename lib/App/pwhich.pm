@@ -30,6 +30,11 @@ sub main
   
   foreach my $file (@ARGV)
   {
+    local $File::Which::IMPLICIT_CURRENT_DIR = $File::Which::IMPLICIT_CURRENT_DIR;
+    if($^O eq 'MSWin32' && eval { require Shell::Guess; 1 })
+    {
+      $File::Which::IMPLICIT_CURRENT_DIR = !Shell::Guess->running_shell->is_power;
+    }
     my @result = $opts{a}
     ? which($file)
     : scalar which($file);
