@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.16      2018-12-31 14:30:24 -0500
   - On Windows use Shell::Guess to determine if the current
     directory ('.') should be included implicitly
 
