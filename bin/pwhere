@@ -5,8 +5,8 @@ use warnings;
 use lib::findbin '../lib'; # dev-only
 use App::pwhich;
 
-# PODNAME: pwhich
-# ABSTRACT: Pure Perl implementation of which
+# PODNAME: pwhere
+# ABSTRACT: Pure Perl implementation of where
 # VERSION
 
 exit App::pwhich::main('where', @ARGV);
