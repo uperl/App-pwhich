@@ -1,14 +1,16 @@
-# pwhich [![Build Status](https://secure.travis-ci.org/plicease/App-pwhich.png)](http://travis-ci.org/plicease/App-pwhich)
+# pwhich ![linux](https://github.com/uperl/App-pwhich/workflows/linux/badge.svg) ![macos](https://github.com/uperl/App-pwhich/workflows/macos/badge.svg) ![windows](https://github.com/uperl/App-pwhich/workflows/windows/badge.svg) ![cygwin](https://github.com/uperl/App-pwhich/workflows/cygwin/badge.svg) ![msys2-mingw](https://github.com/uperl/App-pwhich/workflows/msys2-mingw/badge.svg)
 
 Pure Perl implementation of which
 
 # SYNOPSIS
 
-    $ pwhich perl
-    $ pwhich -a perl          # print all matches
-    $ pwhich perl perldoc ... # look for multiple programs
-    $ pwhich -a perl perldoc ...
-    $ pwhich -s perl          # silent mode
+```
+$ pwhich perl
+$ pwhich -a perl          # print all matches
+$ pwhich perl perldoc ... # look for multiple programs
+$ pwhich -a perl perldoc ...
+$ pwhich -s perl          # silent mode
+```
 
 # DESCRIPTION
 
@@ -19,7 +21,9 @@ purely in Perl (uses the module `File::Which`), so is portable.
 
 ## Calling syntax
 
-    $ pwhich [-a] [-s] [-v] programname [programname ...]
+```
+$ pwhich [-a] [-s] [-v] programname [programname ...]
+```
 
 ## Options
 
