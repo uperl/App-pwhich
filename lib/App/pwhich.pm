@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.008001;
 use File::Which qw( which );
-use Getopt::Std qw( getopts );   ## no critic (Freenode::PreferredAlternatives)
+use Getopt::Std qw( getopts );   ## no critic (Community::PreferredAlternatives)
 
 # ABSTRACT: Perl-only `which`
 # VERSION
