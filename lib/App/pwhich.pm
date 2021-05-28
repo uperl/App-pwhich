@@ -104,6 +104,11 @@ need L<pwhich>.  If you require L<pwhich>,
 as a prerequisite, please use L<App::pwhich> as a prerequisite
 instead of L<File::Which>.
 
+If you want these executables installed without the C<p> prefix
+(useful on platforms like windows that do not have their own
+native which or where), set C<PERL_APP_PWHICH_NO_PREFIX> to
+C<no-prefix> during install of this module.
+
 =head1 SUPPORT
 
 Bugs should be reported via the GitHub issue tracker

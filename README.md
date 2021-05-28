@@ -66,6 +66,11 @@ command `which` and `where` usually do.
 
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 
+If you want these executables installed without the `p` prefix
+(useful on platforms like windows that do not have their own
+native which or where), set `PERL_APP_PWHICH_NO_PREFIX` to
+`no-prefix` during install of this module.
+
 # AUTHOR
 
 Original author: Per Einar Ellefsen <pereinar@cpan.org>

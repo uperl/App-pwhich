@@ -80,4 +80,9 @@ command C<which> and C<where> usually do.
 
 This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 
+If you want these executables installed without the C<p> prefix
+(useful on platforms like windows that do not have their own
+native which or where), set C<PERL_APP_PWHICH_NO_PREFIX> to
+C<no-prefix> during install of this module.
+
 =cut
