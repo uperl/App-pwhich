@@ -45,7 +45,7 @@ $ pwhich [-a] [-s] [-v] programname [programname ...]
 # SUPPORT
 
 Bugs should be reported via the GitHub issue tracker
-[https://github.com/plicease/App-pwhich/issues](https://github.com/plicease/App-pwhich/issues)
+[https://github.com/uperl/App-pwhich/issues](https://github.com/uperl/App-pwhich/issues)
 For other issues, contact the maintainer.
 
 # SEE ALSO
@@ -78,7 +78,7 @@ Adam Kennedy <adamk@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2002,2022 by Per Einar Ellefsen <pereinar@cpan.org>.
+This software is copyright (c) 2002-2022 by Per Einar Ellefsen <pereinar@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

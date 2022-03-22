@@ -108,7 +108,7 @@ instead of L<File::Which>.
 
 Bugs should be reported via the GitHub issue tracker
 
-L<https://github.com/plicease/App-pwhich/issues>
+L<https://github.com/uperl/App-pwhich/issues>
 
 For other issues, contact the maintainer.
 

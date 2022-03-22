@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Test requires Test::Script 1.09 for syntax (gh#7)
+  - Option to install without "p" prefix for platforms that do
+    not provide their own which and where (gh#1, gh#8)
 
 1.16      2018-12-31 14:30:24 -0500
   - On Windows use Shell::Guess to determine if the current
