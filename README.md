@@ -1,4 +1,4 @@
-# pwhich ![linux](https://github.com/uperl/App-pwhich/workflows/linux/badge.svg) ![macos](https://github.com/uperl/App-pwhich/workflows/macos/badge.svg) ![windows](https://github.com/uperl/App-pwhich/workflows/windows/badge.svg) ![cygwin](https://github.com/uperl/App-pwhich/workflows/cygwin/badge.svg) ![msys2-mingw](https://github.com/uperl/App-pwhich/workflows/msys2-mingw/badge.svg)
+# pwhich ![static](https://github.com/uperl/App-pwhich/workflows/static/badge.svg) ![linux](https://github.com/uperl/App-pwhich/workflows/linux/badge.svg) ![macos](https://github.com/uperl/App-pwhich/workflows/macos/badge.svg) ![windows](https://github.com/uperl/App-pwhich/workflows/windows/badge.svg) ![cygwin](https://github.com/uperl/App-pwhich/workflows/cygwin/badge.svg) ![msys2-mingw](https://github.com/uperl/App-pwhich/workflows/msys2-mingw/badge.svg)
 
 Pure Perl implementation of which
 
@@ -78,7 +78,7 @@ Adam Kennedy <adamk@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2002 by Per Einar Ellefsen <pereinar@cpan.org>.
+This software is copyright (c) 2002,2022 by Per Einar Ellefsen <pereinar@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
