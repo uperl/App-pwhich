@@ -25,7 +25,7 @@ purely in Perl (uses the module C<File::Which>), so is portable.
 =head1 SUPPORT
 
 Bugs should be reported via the GitHub issue tracker
-L<https://github.com/plicease/App-pwhich/issues>
+L<https://github.com/uperl/App-pwhich/issues>
 For other issues, contact the maintainer.
 
 =head1 SEE ALSO

@@ -54,7 +54,7 @@ Prints version (of C<File::Which>) and copyright notice and exits.
 =head1 SUPPORT
 
 Bugs should be reported via the GitHub issue tracker
-L<https://github.com/plicease/App-pwhich/issues>
+L<https://github.com/uperl/App-pwhich/issues>
 For other issues, contact the maintainer.
 
 =head1 SEE ALSO
